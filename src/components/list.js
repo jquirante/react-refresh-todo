@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import dummyList from '../data/to_do_list';
+import AddItem from './add_item';
 
 class List extends Component {
     state = {
@@ -28,6 +29,7 @@ class List extends Component {
         return(
             <ul className="collection">
                 {listElements}
+                <AddItem/>
             </ul>
             
         )
