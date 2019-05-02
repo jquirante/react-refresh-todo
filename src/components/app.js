@@ -1,6 +1,7 @@
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize';
 import React from 'react';
 import List from './list';
-import 'materialize-css/dist/css/materialize.min.css';
 import AddItem from './add_item';
 
 
