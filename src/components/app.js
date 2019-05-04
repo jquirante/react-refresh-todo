@@ -18,6 +18,12 @@ class App extends Component {
         })
     }
 
+    addItem(item) {
+
+
+        console.log('ADD ITEM: ', item);
+        
+    }
     componentDidMount() {
         this.getListData();
     }
@@ -28,7 +34,7 @@ class App extends Component {
         return(
             <div className="container">
                 <h1 className="center">To Do List</h1>
-                <AddItem/>
+                <AddItem add={this.addItem}/>
                 <List toDos={list}/>
             </div>
         )
