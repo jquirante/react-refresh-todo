@@ -9,6 +9,7 @@ class AddItem extends Component {
     handleSaveItem = (e) => {
         e.preventDefault();
 
+        this.props.add(this.state);
         console.log("NEW ITEM: ", this.state);
     }
     render() {
