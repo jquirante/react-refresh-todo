@@ -18,15 +18,19 @@ class App extends Component {
         })
     }
 
-    addItem(item) {
-
+    addItem = (item) => {
 
         console.log('ADD ITEM: ', item);
+        this.setState({
+            list: [item,...this.state.list]
+        })
         
     }
+
     componentDidMount() {
         this.getListData();
     }
+
     render() {
 
         const { list } = this.state;
