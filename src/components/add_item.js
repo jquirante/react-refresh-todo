@@ -12,6 +12,13 @@ class AddItem extends Component {
         this.props.add(this.state);
         console.log("NEW ITEM: ", this.state);
     }
+
+    reset = () => {
+        this.setState({
+            title: '',
+            details: ''
+        })
+    }
     render() {
 
         const { title, details } = this.state;
@@ -28,7 +35,7 @@ class AddItem extends Component {
                         <label htmlFor="details">Details</label>
                     </div>
                     <div className="col s6 center">
-                        <button type="button" className="btn red waves-effect waves-light">Cancel</button>
+                        <button onClick= {this.reset} type="button" className="btn red waves-effect waves-light">Clear</button>
                     </div>
                     <div className="col s6 center">
                         <button className="btn green waves-effect waves-light">Add Item</button>
